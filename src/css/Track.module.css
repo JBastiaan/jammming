@@ -1,0 +1,59 @@
+.track {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.track:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(5px);
+}
+
+.info {
+  flex: 1;
+  text-align: left;
+}
+
+.name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+.artist {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0.2rem 0;
+}
+
+.album {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+.addButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #1db954;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  margin-left: 1rem;
+}
+
+.addButton:hover {
+  background: #1ed760;
+  transform: scale(1.1);
+} 
