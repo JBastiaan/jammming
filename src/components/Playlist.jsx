@@ -7,7 +7,7 @@ const Playlist = ({ tracks = [], onSave, onClick }) => {
 
   const handleSave = (e) => {
     e.preventDefault();
-    console.log('Saving playlist to spotify with tracks: '+ tracks)
+    setName('')
     onSave(name, tracks);
   };
 
