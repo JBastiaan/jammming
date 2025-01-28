@@ -22,8 +22,8 @@ const generateCodeChallenge = async (codeVerifier) => {
         .replace(/\//g, '_');
 };
 
-const SPOTIFY_CLIENT_ID = import.meta.env.SPOTIFY_CLIENT_ID;
-const REDIRECT_URI = import.meta.env.REDIRECT_URI;
+const SPOTIFY_CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
+const REDIRECT_URI = import.meta.env.VITE_REDIRECT_URI;
 
 const clearStoredAuthData = () => {
     localStorage.removeItem('code_verifier');
