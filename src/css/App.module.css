@@ -4,6 +4,10 @@
   padding: 2rem;
   background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .header {
@@ -24,6 +28,7 @@
   align-items: center;
   max-width: 800px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .mainContent {
@@ -32,6 +37,26 @@
   gap: 2rem;
   width: 100%;
   margin-top: 2rem;
+}
+
+.error {
+  background: rgba(255, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  margin: 1rem;
+}
+
+.loading {
+  font-size: 1.2rem;
+  font-weight: 500;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
 }
 
 @media (max-width: 768px) {
