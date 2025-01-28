@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Tracklist from './Tracklist';
 import styles from '../css/Playlist.module.css';
 
-const Playlist = ({ tracks = [], onSave, onRemoveFromPlaylist }) => {
+const Playlist = ({ tracks = [], onSave, onClick }) => {
   const [name, setName] = useState('');
 
   const handleSave = (e) => {
@@ -28,7 +28,7 @@ const Playlist = ({ tracks = [], onSave, onRemoveFromPlaylist }) => {
           </button>
         </div>
       </form>
-      <Tracklist tracks={tracks} onRemoveFromPlaylist={onRemoveFromPlaylist} />
+      <Tracklist tracks={tracks} isPlaylist={true} onClick={onClick} />
     </div>
   );
 };

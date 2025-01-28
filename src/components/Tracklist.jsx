@@ -1,11 +1,11 @@
 import Track from './Track';
 
-const Tracklist = ({ tracks = [], onAddToPlaylist, onRemoveFromPlaylist }) => {
+const Tracklist = ({ tracks = [], isPlaylist = false, onClick }) => {
   return (
     <div>
       {tracks.length > 0 ? (
         tracks.map((track) => (
-          <Track key={track.id} track={track} onAddToPlaylist={onAddToPlaylist} onRemoveFromPlaylist={onRemoveFromPlaylist} />
+          <Track key={track.id} track={track} isPlaylist={isPlaylist} onClick={onClick} />
         ))
       ) : (
         <p></p>

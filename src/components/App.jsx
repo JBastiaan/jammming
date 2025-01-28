@@ -30,17 +30,14 @@ function App() {
   };
 
   const handleAddToPlaylist = (track) => {
-    track.isAdded = true;
     console.log('Adding track to playlist: ' + track);
     setPlaylistTracks([...playlistTracks, track]);
   };
 
   const handleRemoveFromPlaylist = (track) => {
-    track.isAdded = false;
     console.log('Removing track from playlist: ' + track);
     setPlaylistTracks([...playlistTracks.filter(t => t.id != track.id)]);
   };
-
 
   return (
     <div className={styles.container}>
@@ -48,11 +45,11 @@ function App() {
         <h1 className={styles.title}>Jammming</h1>
       </div>
       <div className={styles.content}>
-        <div>
-          <Searchbar onSearch={handleSearch} />
-          <SearchResults tracks={searchResultTracks} onAddToPlaylist={handleAddToPlaylist} />
+        <Searchbar onSearch={handleSearch} />
+        <div className={styles.mainContent}>
+          <SearchResults tracks={searchResultTracks} onClick={handleAddToPlaylist} />
+          <Playlist tracks={playlistTracks} onSave={handleSave} onClick={handleRemoveFromPlaylist} />
         </div>
-        <Playlist tracks={playlistTracks} onSave={handleSave} onRemoveFromPlaylist={handleRemoveFromPlaylist} />
       </div>
     </div>
   );

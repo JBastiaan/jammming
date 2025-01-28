@@ -1,13 +1,17 @@
 .searchContainer {
   margin-bottom: 2rem;
+  width: 100%;
+  max-width: 800px;
 }
 
 .searchForm {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  max-width: 600px;
-  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .input {
@@ -28,10 +32,11 @@
 
 .input:focus {
   background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 2px rgba(29, 185, 84, 0.3);
 }
 
 .button {
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem 2rem;
   font-size: 1rem;
   border: none;
   border-radius: 25px;
@@ -39,9 +44,13 @@
   color: white;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .button:hover {
   background: #1ed760;
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(29, 185, 84, 0.3);
 } 
