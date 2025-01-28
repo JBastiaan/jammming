@@ -22,8 +22,8 @@ const generateCodeChallenge = async (codeVerifier) => {
         .replace(/\//g, '_');
 };
 
-const SPOTIFY_CLIENT_ID = '812477da2bcd4e6890d9794b2eb75147'; // Replace with your Spotify Client ID
-const REDIRECT_URI = 'http://localhost:5173'; // Replace with your redirect URI
+const SPOTIFY_CLIENT_ID = import.meta.env.SPOTIFY_CLIENT_ID;
+const REDIRECT_URI = import.meta.env.REDIRECT_URI;
 
 const clearStoredAuthData = () => {
     localStorage.removeItem('code_verifier');
